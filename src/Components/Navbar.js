@@ -49,7 +49,7 @@ const Navbar = () => {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button onClick={handleDisplayChange2} className="btn btn-outline-success" type="button">
+              <button onClick={handleDisplayChange2} className="btn" type="button">
                 <img src={threeBars} alt="Menu" width="30" height="30" />
               </button>
             </form>

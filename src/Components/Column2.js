@@ -5,7 +5,7 @@ import DD from "../Images/DD.png";
 import { v4 as uuidv4 } from "uuid";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // Import default styles
-
+import Notes from "./Notes";
 
 const Column2 = (props) => {
   let { displayChange2, rightDisplay } = props;
@@ -106,7 +106,6 @@ const Column2 = (props) => {
         />
       </div>
 
-      {/* ////////////////////////////////////////////////////////////////////// */}
       <p className="d-inline-flex gap-1">
         <button
           className="btn"
@@ -134,9 +133,6 @@ const Column2 = (props) => {
             ></textarea>
             <div className="d-flex justify-content-center ">
               <div className="d-flex  w-50 p-3  justify-content-start  ">
-                {/* <button className="btn">
-                  <img src={bell} alt="Menu" width="30" height="30" />
-                </button> */}
                 <button onClick={recyclefun} className="btn">
                   <img src={recycle} alt="Menu" width="30" height="30" />
                 </button>
@@ -154,51 +150,18 @@ const Column2 = (props) => {
         </div>
       </div>
 
+      {/* Rendering all the To_Dos in new page */}
       <div className="row">
         {todos.map((item) => {
           return (
-            <div
+            <Notes
+              displayChange2={displayChange2}
+              handleCheckBox={handleCheckBox}
+              item={item}
+              rightDisplay={rightDisplay}
+              handleDelete={handleDelete}
               key={item.id}
-              className={`my-3 container ${
-                displayChange2 ? "d-flex'" : "col-4"
-              } justify-content-between`}
-              style={{ height: "50px" }}
-            >
-              <div className="d-flex">
-                <div className="form-check">
-                  <input
-                    onChange={handleCheckBox}
-                    name={item.id}
-                    className="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                </div>
-                <div
-                  onClick={() => {
-                    rightDisplay(item);
-                  }}
-                  className={`${
-                    item.isCompleted ? "text-decoration-line-through" : ""
-                  }`}
-                >
-                  {item.todo}
-                </div>
-              </div>
-              <div>
-                <span className=" mx-2">{item.time}</span>
-                <button
-                  onClick={(e) => {
-                    handleDelete(e, item.id);
-                    rightDisplay("");
-                  }}
-                  className="btn btn-danger"
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
+            />
           );
         })}
       </div>
