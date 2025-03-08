@@ -52,7 +52,7 @@ const ProgressBar = ({ percentage }) => {
             <span className="progress-right">
               <span className="progress-bar"></span>
             </span>
-            <div className="progress-value">{percentage}%</div>
+            <div className="progress-value">{percentage.toFixed(2)}%</div>
           </div>
         </div>
       </div>

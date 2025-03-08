@@ -44,6 +44,9 @@ const Column1 = (props) => {
           <div className="align-items-center mx-auto">
             <ProgressBar percentage={percentageCompleted} />
           </div>
+          <div>
+            Task Done : <strong>{DoneTodayToDo}</strong>
+          </div>
         </div>
       </div>
     </>

@@ -38,7 +38,7 @@ const Body = (props) => {
         {/* ------------------------------------------------- */}
         <div
           style={{ height: "90vh" }}
-          className={`overflow-scroll col ${
+          className={` col ${
             !displayChange ? "col-9" : "col-6"
           } border border-dark`}
         >

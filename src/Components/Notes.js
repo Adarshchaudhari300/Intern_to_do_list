@@ -1,19 +1,19 @@
 import React from "react";
 import "../Css/Notes.css";
 
-
 const Notes = (props) => {
-  let { displayChange2, handleCheckBox, item ,rightDisplay,handleDelete} = props;
+  let { displayChange2, handleCheckBox, item, rightDisplay, handleDelete } =
+    props;
   return (
     <>
       <div
+        id="notediv1bigcontainer"
         className={`my-3 container ${
-          displayChange2 ? "d-flex'" : "col-4"
+          displayChange2 ? "d-flex'" : "col-6"
         } justify-content-between`}
-        style={{ height: "50px" }}
       >
-        <div className="d-flex">
-          <div className="form-check">
+        <div id="notediv2taskcontainer" className="d-flex">
+          <div id="notediv2taskcontainer1" className="form-check">
             <input
               onChange={handleCheckBox}
               name={item.id}
@@ -24,6 +24,7 @@ const Notes = (props) => {
             />
           </div>
           <div
+            id="notediv2taskcontainer2"
             onClick={() => {
               rightDisplay(item);
             }}
@@ -31,19 +32,20 @@ const Notes = (props) => {
               item.isCompleted ? "text-decoration-line-through" : ""
             }`}
           >
-            {item.todo}
+            {item.todo.slice(0, 80)}
           </div>
         </div>
-        <div>
-          <span className=" mx-2">{item.time}</span>
+        <div id="notediv2taskcontainer3" className="d-flex justify-content-end">
+          <span className=" mx-2"><strong>Due:</strong> {item.time}</span>
+
           <button
             onClick={(e) => {
               handleDelete(e, item.id);
               rightDisplay("");
             }}
-            className="btn btn-danger"
+            className="btn btn-sm "
           >
-            Delete
+            Trash
           </button>
         </div>
       </div>

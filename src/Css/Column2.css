@@ -1,0 +1,48 @@
+#col2BigContainer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(238, 246, 239, 1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#col2dropdown {
+  border-bottom: grey 2px solid;
+  width: 100%;
+  border-radius: 5px;
+}
+#col2dropdown button {
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+#col2dropdown img {
+  margin-left: 5px;
+}
+#collapseExample {
+  border-bottom: grey 2px solid;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#col2div2btnimg button {
+  color: green;
+
+  background-color: rgba(204, 223, 206, 1);
+}
+
+#col2div2icons button:hover {
+  color: rgb(93, 186, 93);
+  background-color: rgba(204, 223, 206, 1);
+  transition: 0.3s;
+}
+
+#col2div2btnimg button:hover {
+  color: rgb(2, 31, 2);
+  background-color: rgba(204, 223, 206, 1);
+  transition: 0.3s;
+}
+
+#col2div3bigcontainer {
+    /* overflow-y: scroll; */
+    height: 60%;
+}

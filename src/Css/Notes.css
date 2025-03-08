@@ -1,0 +1,46 @@
+#notediv1bigcontainer {
+  width: 90%;
+  height: fit-content;
+  border-bottom: grey 2px solid;
+  background-color: rgb(249, 248, 247);
+}
+
+.col-6 {
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 45% !important;
+}
+
+#notediv2taskcontainer {
+  width: 100%;
+}
+#notediv2taskcontainer1 input {
+  border: black 2px solid;
+  margin-right: 10px;
+}
+
+.form-check-input {
+  width: 1.5em;
+  height: 1.5em;
+}
+#notediv2taskcontainer2 {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+#notediv2taskcontainer3 {
+  width: 100%;
+  max-height: fit-content;
+}
+#notediv2taskcontainer3 button{
+background-color: rgb(173, 199, 149);
+font-weight: 600;
+max-height: 2.2em;
+}
+
+#notediv2taskcontainer3 button:hover{
+    background-color: rgb(121, 151, 93);
+    font-weight: 600;
+    max-height: 2.3em;
+    }
