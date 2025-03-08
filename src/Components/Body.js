@@ -15,9 +15,8 @@ const Body = (props) => {
   console.log(todosbody);
 
   let todayTodos = todosbody.filter((item) => {
-    return item.time ===new Date().toDateString();
+    return item.time === new Date().toDateString();
   });
-
 
   return (
     <div className="container text-center">
@@ -26,21 +25,15 @@ const Body = (props) => {
 
         {/* column-1 */}
         {/* ------------------------------------------------- */}
-        <div
-          className={`col col-3 border border-dark ${
-            displayChange ? "d-flex" : "d-none"
-          }`}
-        >
-          <Column1 todosbody={todosbody} todayTodos={todayTodos}/>
+        <div className={`col col-3  ${displayChange ? "d-flex" : "d-none"}`}>
+          <Column1 todosbody={todosbody} todayTodos={todayTodos} />
         </div>
 
         {/* column-2 */}
         {/* ------------------------------------------------- */}
         <div
           style={{ height: "90vh" }}
-          className={` col ${
-            !displayChange ? "col-9" : "col-6"
-          } border border-dark`}
+          className={` col ${!displayChange ? "col-9" : "col-6"}  `}
         >
           <Column2
             displayChange2={displayChange2}
@@ -51,7 +44,7 @@ const Body = (props) => {
 
         {/* Column-3 */}
         {/* ------------------------------------------------- */}
-        <div id="col3maindiv" className="col col-3 border border-dark">
+        <div id="col3maindiv" className="col col-3 ">
           <div id="col3maindiv2">
             Current <span>To-Do</span>
           </div>

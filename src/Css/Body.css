@@ -9,7 +9,7 @@
   font-size: 1.9rem;
   border-radius: 5px;
   padding: 10px;
-  border-bottom: grey 2px solid;
+  border-bottom: 2px rgb(181, 181, 181) solid;
 }
 #col3maindiv2 span {
   color: rgb(22, 95, 24);
@@ -23,7 +23,7 @@
   padding: 10%;
   border-radius: 5px;
 
-  border-bottom: grey 2px solid;
+  border-bottom:2px rgb(181, 181, 181) solid;
 }
 #col3subdiv1 span {
   color: rgba(63, 145, 66, 1);
@@ -40,7 +40,7 @@
 
   border-radius: 5px;
 
-  border-bottom: grey 2px solid;
+  border-bottom: 2px rgb(181, 181, 181) solid;
 }
 #col3subdiv2 span {
   color: rgba(63, 145, 66, 1);

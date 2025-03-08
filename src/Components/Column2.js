@@ -13,56 +13,67 @@ const Column2 = (props) => {
 
   const [todo, settodo] = useState("");
   //dummmy to_dos
+  //such data can be stored in the mongodb by creating api through express and saving it to mongoDB
   let newnote = [
     {
-      id: "edc73437d4-070f-4fd4-adc4-0173477b2c9b",
-      todo: "asds dfdf df ",
+      id: "a1b2c3d4e5-1234-5678-9101-abcdef123456",
+      todo: "Buy books of Science",
       isCompleted: false,
       time: "Sat Mar 08 2025",
-    },{
-      id: "edc733457d4-070f-4fd4-adc4-0173477b2c9b",
-      todo: "asds  df  df ",
-      isCompleted: false,
-      time: "Sat Mar 08 2025",
-    },{
-      id: "edc737656d4-070f-4fd4-adc4-0173477b2c9b",
-      todo: "asds  sdfsdf f  sdf ",
-      isCompleted: false,
-      time: "Sat Mar 08 2025",
-    },{
-      id: "edc7323457d4-070f-4fd4-adc4-0173477b2c9b",
-      todo: "asdsa f f d sfswdf ",
-      isCompleted: false,
-      time: "Sat Mar 08 2025",
-    },{
-      id: "edc738767d4-070f-4fd4-adc4-0173477b2c9b",
-      todo: "asdsasdasdasd ",
-      isCompleted: false,
-      time: "Sat Mar 08 2025",
-    },{
-      id: "edc7378678d4-070f-4fd4-adc4-0173477b2c9b",
-      todo: "asdssdf sddfsfs s df sddf",
-      isCompleted: false,
-      time: "Sat Mar 08 2025",
-    },{
-      id: "edc733453767d4-070f-4fd4-adc4-0173477b2c9b",
-      todo: "asdssdf sfsdf sdf f",
-      isCompleted: false,
-      time: "Sat Mar 08 2025",
-    }, 
-
-    {
-      id: "92e89345366f1-8e7f-4a66-913e-f2cacbf8ff2b",
-      todo: "asdadasd d aerfta ",
-      isCompleted: false,
-      time: "Wed Mar 19 2025",
     },
-
     {
-      id: "c02efc34357689-c7b5-40c6-881b-1c5bb7264789",
-      todo: " afasdf   kihgsuighre er geu igw hpgwtr hrtnh re njgerth peh eryh eryheryh eryyjeyhje",
+      id: "a1b2casd3d4e5-1234-5678-9101-abcdef123456",
+      todo: "Buy groceries for the week",
       isCompleted: false,
-      time: "Thu Mar 13 2025",
+      time: "Sat Mar 08 2025",
+    },
+    {
+      id: "f6g7h8i9j0-2345-6789-1011-ghijkl789012",
+      todo: "Complete the project report",
+      isCompleted: false,
+      time: "Sat Mar 09 2025",
+    },
+    {
+      id: "k1l2m3n4o5-3456-7890-1121-mnopqr345678",
+      todo: "Call the bank regarding account updates",
+      isCompleted: false,
+      time: "Sat Mar 09 2025",
+    },
+    {
+      id: "p6q7r8s9t0-4567-8901-2131-stuvwx567890",
+      todo: "Schedule an appointment with the dentist",
+      isCompleted: false,
+      time: "Sat Mar 10 2025",
+    },
+    {
+      id: "u1v2w3x4y5-5678-9012-3141-uvwxyz678901",
+      todo: "Prepare slides for the team meeting",
+      isCompleted: false,
+      time: "Sat Mar 10 2025",
+    },
+    {
+      id: "z6a7b8c9d0-6789-0123-4151-abcdef789012",
+      todo: "Go for a morning jog",
+      isCompleted: false,
+      time: "Sat Mar 11 2025",
+    },
+    {
+      id: "e1f2g3h4i5-7890-1234-5161-ghijkl890123",
+      todo: "Read a chapter from the new book",
+      isCompleted: false,
+      time: "Sat Mar 11 2025",
+    },
+    {
+      id: "j6k7l8m9n0-8901-2345-6171-mnopqr901234",
+      todo: "Plan weekend trip itinerary",
+      isCompleted: false,
+      time: "Wed Mar 12 2025",
+    },
+    {
+      id: "o1p2q3r4s5-9012-3456-7181-stuvwx012345",
+      todo: "Organize the workspace and declutter",
+      isCompleted: false,
+      time: "Thu Mar 12 2025",
     },
   ];
 
@@ -190,7 +201,10 @@ const Column2 = (props) => {
               rows="4"
             ></textarea>
             <div className="d-flex justify-content-center ">
-              <div id="col2div2icons" className="d-flex  w-50 p-3  justify-content-start  ">
+              <div
+                id="col2div2icons"
+                className="d-flex  w-50 p-3  justify-content-start  "
+              >
                 <button onClick={recyclefun} className="btn">
                   <img src={recycle} alt="Menu" width="40" height="40" />
                 </button>
@@ -198,7 +212,10 @@ const Column2 = (props) => {
                   <img src={calender} alt="Menu" width="40" height="40" />
                 </button>
               </div>
-              <div id="col2div2btnimg" className="d-flex  w-50 p-3  justify-content-end  ">
+              <div
+                id="col2div2btnimg"
+                className="d-flex  w-50 p-3  justify-content-end  "
+              >
                 <button onClick={handleAdd} className="btn ">
                   Add task
                 </button>

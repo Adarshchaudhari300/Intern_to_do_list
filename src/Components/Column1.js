@@ -1,6 +1,8 @@
 import React from "react";
 import Column1Modal from "./Column1Modal";
 import ProgressBar from "./ProgressBar";
+import "../Css/Column1.css";
+import logimg from "../Images/logimg.jpeg"; // Import the image
 
 const Column1 = (props) => {
   let { todayTodos, todosbody } = props;
@@ -25,26 +27,30 @@ const Column1 = (props) => {
   return (
     <>
       <div
-        className="d-flex flex-column mb-3 justify-content-center"
+        id="col1maindiv"
+        className="d-flex flex-column mb-3 justify-content-start"
         style={{ width: "100%" }}
       >
         {/* First Div is Of Login in info */}
-        <div className="container my-4">This is Logged In Logo</div>
+        <div id="col1div1" className="container my-4 ">
+          <img src={logimg} alt="Menu" width="80" height="80" />
+          <div>Hey , Alexa</div>
+        </div>
 
         {/* second div is of All task And Todays task Modal */}
-        <div className="container ">
+        <div id="col1div2" className="container ">
           <Column1Modal todosbody={todosbody} todayTodos={todayTodos} />
         </div>
 
         {/* Third Div is of Complted Todays Task */}
-        <div className="container border border-dark d-flex flex-column mb-3 my-4 just">
-          <div>
+        <div id="col1div3" className="  d-flex flex-column just">
+          <div id="col1div3div1">
             Today Task : <strong>{TotalTodayToDo}</strong>
           </div>
-          <div className="align-items-center mx-auto">
+          <div id="col1div3div2" className="align-items-center mx-auto">
             <ProgressBar percentage={percentageCompleted} />
           </div>
-          <div>
+          <div id="col1div3div3">
             Task Done : <strong>{DoneTodayToDo}</strong>
           </div>
         </div>

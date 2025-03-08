@@ -1,0 +1,30 @@
+#collapseOne {
+  max-height: 16em;
+  overflow-y: scroll;
+}
+
+#collapseOne div {
+  border-bottom: 2px rgb(181, 181, 181) solid;
+}
+.accordion-button{
+    color: green;
+    font-weight: 500;
+}
+#collapseTwo {
+  max-height: 16em;
+  overflow-y: scroll;
+}
+
+#collapseTwo div {
+  border-bottom: 2px rgb(181, 181, 181) solid;
+}
+#accordionExample {
+  max-height: 100%;
+}
+
+#accordionExamplediv1 {
+  max-height: 100%;
+}
+#accordionExamplediv2 {
+  max-height: 100%;
+}
