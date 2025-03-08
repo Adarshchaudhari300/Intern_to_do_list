@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import recycle from "../Images/recycle.webp";
 import calender from "../Images/calender.webp";
 import DD from "../Images/DD.png";
@@ -6,17 +6,48 @@ import { v4 as uuidv4 } from "uuid";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // Import default styles
 import Notes from "./Notes";
+import "../Css/Column2.css";
 
 const Column2 = (props) => {
-  let { displayChange2, rightDisplay } = props;
+  let { displayChange2, rightDisplay, settodosbody } = props;
 
   const [todo, settodo] = useState("");
-  const [todos, settodos] = useState([]);
+  //dummmy to_dos
+  let newnote = [
+    {
+      id: "edc737d4-070f-4fd4-adc4-0173477b2c9b",
+      todo: "asds",
+      isCompleted: false,
+      time: "Sat Mar 08 2025",
+    },
+
+    {
+      id: "92e896f1-8e7f-4a66-913e-f2cacbf8ff2b",
+      todo: "asdadasd d aerfta ",
+      isCompleted: false,
+      time: "Wed Mar 19 2025",
+    },
+
+    {
+      id: "c02efc89-c7b5-40c6-881b-1c5bb7264789",
+      todo: " afasdf   kihgsuighre er geu igw hpgwtr hrtnh re njgerth peh eryh eryheryh eryyjeyhje",
+      isCompleted: false,
+      time: "Thu Mar 13 2025",
+    },
+  ];
+
+  const [todos, settodos] = useState(newnote);
 
   /////////////////////////////////////////////////////////////////////////////////////////
   const handleChange = (e) => {
     settodo(e.target.value);
   };
+  /////////////////////////////////////////////////////////////////////////////////////////
+
+  //sending todos to body everytime the todos is changed here
+  useEffect(() => {
+    settodosbody(todos);
+  }, [todos]);
   /////////////////////////////////////////////////////////////////////////////////////////
   const handleAdd = () => {
     settodos([
@@ -24,6 +55,7 @@ const Column2 = (props) => {
       { id: uuidv4(), todo, isCompleted: false, time: date.toDateString() },
     ]);
     settodo("");
+    // settodosbody(todos);
     console.log(todos);
   };
 
@@ -67,6 +99,7 @@ const Column2 = (props) => {
       ];
       settodos(newTodos1);
     }
+    // settodosbody(todos);
   };
 
   /////////////////////////////////////////////////////////////////////////////////////////
@@ -75,6 +108,7 @@ const Column2 = (props) => {
       return item.id !== id;
     });
     settodos(newTodos);
+    // settodosbody(todos);
   };
   /////////////////////////////////////////////////////////////////////////////////////////
 
