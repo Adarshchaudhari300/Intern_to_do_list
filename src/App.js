@@ -1,12 +1,12 @@
-
-import './App.css';
-import Navbar from './Components/Navbar';
+import "./App.css";
+import LoginModal from "./Components/LoginModal";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <>
-    <Navbar/>
-
+      <Navbar />
+      <LoginModal />
     </>
   );
 }
