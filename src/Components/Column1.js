@@ -24,6 +24,9 @@ const Column1 = (props) => {
     percentageCompleted = 100 * (DoneTodayToDo / TotalTodayToDo);
   }
 
+  //fetching user-name from localStorage
+  let username = localStorage.getItem("username");
+
   return (
     <>
       <div
@@ -34,7 +37,7 @@ const Column1 = (props) => {
         {/* First Div is Of Login in info */}
         <div id="col1div1" className="container my-4 ">
           <img src={logimg} alt="Menu" width="80" height="80" />
-          <div>Hey , Alexa</div>
+          <div>Hey , {username}</div>
         </div>
 
         {/* second div is of All task And Todays task Modal */}

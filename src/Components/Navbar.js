@@ -4,7 +4,6 @@ import threeline from "../Images/3line.png"; // Import the image
 import ninedots from "../Images/9dots.png"; // Import the image
 import logo from "../Images/log.png"; // Import the image
 import Body from "./Body";
-import LogIn from "./LogIn";
 
 const Navbar = () => {
   //////////////////////////////////////////////////////////////////////////////////////////
