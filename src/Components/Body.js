@@ -12,7 +12,7 @@ const Body = (props) => {
   const [rightDisplay1, setrightDisplay] = useState(note);
 
   const [todosbody, settodosbody] = useState([]);
-  console.log(todosbody);
+  // console.log(todosbody);
 
   let todayTodos = todosbody.filter((item) => {
     return item.time === new Date().toDateString();

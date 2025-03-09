@@ -3,8 +3,8 @@ import "../Css/Column1Modal.css";
 
 const Column1Modal = (props) => {
   let { todayTodos, todosbody } = props;
-  console.log(todosbody);
-  console.log("columnmodal");
+  // console.log(todosbody);
+  // console.log("columnmodal");
   return (
     <>
       <div className="accordion" id="accordionExample">
