@@ -1,5 +1,12 @@
 Read Me !!
 
+Running Guideline
+Clone Repo
+install Nodemodules :npm i
+start : npm run start
+
+Url Of Hosted Website :https://adarshchaudhari300.github.io/Intern_to_do_list/
+
 User Authentication Requirement
 
 If a user is not logged in, the site will not display any tasks. Instead, they will be prompted to log in before accessing task-related features.
@@ -55,4 +62,4 @@ Checkbox: Marks a task as done and moves it to the bottom of the task list.
 ![alt text](<Screenshot (28).png>)
 
 
-Other images Of website
+
