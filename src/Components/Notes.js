@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Css/Notes.css";
 
 const Notes = (props) => {
   let { displayChange2, handleCheckBox, item, rightDisplay, handleDelete } =
     props;
+
+
   return (
     <>
       <div
@@ -15,6 +17,7 @@ const Notes = (props) => {
         <div id="notediv2taskcontainer" className="d-flex">
           <div id="notediv2taskcontainer1" className="form-check">
             <input
+              checked={item.isCompleted}
               onChange={handleCheckBox}
               name={item.id}
               className="form-check-input"
@@ -36,7 +39,9 @@ const Notes = (props) => {
           </div>
         </div>
         <div id="notediv2taskcontainer3" className="d-flex justify-content-end">
-          <span className=" mx-2"><strong>Due:</strong> {item.time}</span>
+          <span className=" mx-2">
+            <strong>Due:</strong> {item.time}
+          </span>
 
           <button
             onClick={(e) => {
