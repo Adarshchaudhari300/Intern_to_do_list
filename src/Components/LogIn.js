@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const LogIn = () => {
   const [credentials, setCredentials] = useState({
-    name1: "",
-    email: "",
-    password: "",
+    name1: "Anynoms",
+    email: "xyz@gmail.com",
+    password: "12345678",
   });
   const onChange1 = (e) => {
     //sets the value of the screen typed content to variables

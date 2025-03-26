@@ -19,22 +19,15 @@ const Body = (props) => {
   });
 
   return (
-    <div className="container text-center">
-      <div className="row">
-        {/* Hide Column 1 when {displayChange} is false */}
-
-        {/* column-1 */}
-        {/* ------------------------------------------------- */}
-        <div className={`col col-3  ${displayChange ? "d-flex" : "d-none"}`}>
+    <div className="container-fluid text-center">
+      <div className="row g-3">
+        {/* Column 1 */}
+        <div className={`col-lg-3 col-md-4 ${displayChange ? "d-flex" : "d-none"}`}>
           <Column1 todosbody={todosbody} todayTodos={todayTodos} />
         </div>
 
-        {/* column-2 */}
-        {/* ------------------------------------------------- */}
-        <div
-          style={{ height: "90vh" }}
-          className={` col ${!displayChange ? "col-9" : "col-6"}  `}
-        >
+        {/* Column 2 */}
+        <div className={`col-lg-6 col-md-8 ${!displayChange ? "col-lg-9" : ""}`} style={{ minHeight: "90vh" }}>
           <Column2
             displayChange2={displayChange2}
             rightDisplay={setrightDisplay}
@@ -42,21 +35,21 @@ const Body = (props) => {
           />
         </div>
 
-        {/* Column-3 */}
-        {/* ------------------------------------------------- */}
-        <div id="col3maindiv" className="col col-3 ">
-          <div id="col3maindiv2">
-            Current <span>To-Do</span>
-          </div>
-          <div id="col3subdiv1">
-            <span>Due Time :</span>
-            {rightDisplay1.time}
-          </div>
-          <div id="col3subdiv2">
-            <span>Text :</span> {rightDisplay1.todo}
+        {/* Column 3 */}
+        <div className="col-lg-3 col-md-12">
+          <div id="col3maindiv">
+            <div id="col3maindiv2">
+              Current <span>To-Do</span>
+            </div>
+            <div id="col3subdiv1">
+              <span>Due Time :</span>
+              {rightDisplay1.time}
+            </div>
+            <div id="col3subdiv2">
+              <span>Text :</span> {rightDisplay1.todo}
+            </div>
           </div>
         </div>
-        {/* ------------------------------------------------- */}
       </div>
     </div>
   );

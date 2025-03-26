@@ -18,3 +18,36 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(25, 78, 25);
 }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    padding: 0.5rem;
+  }
+  
+  .navbar-brand img {
+    width: 120px;
+    height: 40px;
+  }
+  
+  .btn img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-brand img {
+    width: 100px;
+    height: 35px;
+  }
+  
+  .btn {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
